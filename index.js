@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 // create endpoint with get user input
 app.get("/:name", (req, res) => {
   const name = req.params.name;
-  res.send(`A failure test build: Hello ${name}`);
+  res.send(`Hello ${name}`);
 });
 
 const port = process.env.PORT || 3000;
