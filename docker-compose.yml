@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  node_project:
+    container_name: "ExpressAPI"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3004:3000
+
+networks:
+  node_api_network:
