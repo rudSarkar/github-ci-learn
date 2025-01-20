@@ -30,3 +30,16 @@ describe("/GET /:name", () => {
       });
   });
 });
+
+describe("/GET /dev", () => {
+  it("it should return dev name", (done) => {
+    chai
+      .request(server)
+      .get("/dev")
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.text.should.be.eql("Hello");
+        done();
+      });
+  });
+});
