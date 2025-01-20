@@ -15,6 +15,10 @@ app.get("/docs", (req, res) => {
   res.send("README docs")
 });
 
+app.get("/dev", (req, res) => {
+  res.send("dev env")
+});
+
 const port = process.env.PORT || 3000;
 module.exports = app.listen(port, () =>
   console.log(`Listening on port ${port}...`)
