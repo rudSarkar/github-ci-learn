@@ -1,0 +1,11 @@
+name: Installing Node.js Packages
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    name: Installing Node.js Packages
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm install

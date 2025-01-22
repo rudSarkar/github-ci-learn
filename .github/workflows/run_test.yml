@@ -1,0 +1,11 @@
+name: Run Node.js Project Test Cases
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    name: Run Node.js Project Test Cases
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm test
