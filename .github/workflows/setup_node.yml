@@ -1,0 +1,13 @@
+name: Setup Node.js
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    name: Installing Node
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
