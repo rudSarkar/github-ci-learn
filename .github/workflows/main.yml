@@ -9,13 +9,13 @@ on:
 jobs:
   checkout_code:
     name: Checkout Code
-    uses: ./.github/workflows/checkout_code.yml@main
+    uses: ./.github/workflows/checkout_code.yml
   setup_node:
     name: Installing Node.js
-    uses: ./.github/workflows/setup_node.yml@main
+    uses: ./.github/workflows/setup_node.yml
   install_packages:
     name: Installing Node.js Packages
-    uses: ./.github/workflows/install_packages.yml@main
+    uses: ./.github/workflows/install_packages.yml
   run_test:
     name: Run Test Case in Node.js Application
-    uses: ./.github/workflows/run_test.yml@main
+    uses: ./.github/workflows/run_test.yml
