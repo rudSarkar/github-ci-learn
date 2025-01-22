@@ -38,7 +38,7 @@ describe("/GET /dev", () => {
       .get("/dev")
       .end((err, res) => {
         res.should.have.status(200);
-        res.text.should.be.eql("Hello not_push to main");
+        res.text.should.be.eql("dev");
         done();
       });
   });
