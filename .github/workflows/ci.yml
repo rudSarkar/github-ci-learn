@@ -2,7 +2,7 @@ name: nodejs-ci
 
 on:
   # Trigger when a new commit is pushed in main branch
-  push:
+  pull_request:
     branches:
       - main
 
