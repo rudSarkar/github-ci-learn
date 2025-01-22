@@ -7,15 +7,17 @@ on:
       - main
 
 jobs:
-  checkout_code:
-    name: Checkout Code
-    uses: ./.github/workflows/checkout_code.yml
-  setup_node:
-    name: Installing Node.js
-    uses: ./.github/workflows/setup_node.yml
-  install_packages:
-    name: Installing Node.js Packages
-    uses: ./.github/workflows/install_packages.yml
-  run_test:
-    name: Run Test Case in Node.js Application
-    uses: ./.github/workflows/run_test.yml
+  node_pipelines:
+    runs-on: ubutu-latest
+    steps:
+      - name: Checkout Code
+        uses: ./.github/workflows/checkout_code.yml
+      
+      - name: Installing Node.js
+        uses: ./.github/workflows/setup_node.yml
+      
+      - name: Installing Node.js Packages
+        uses: ./.github/workflows/install_packages.yml
+      
+      - name: Run Test Case in Node.js Application
+        uses: ./.github/workflows/run_test.yml
