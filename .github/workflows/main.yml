@@ -1,0 +1,23 @@
+name: Node.js CI
+
+on:
+  # Trigger when a new pull request in main branch
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    checkout:
+      uses: ./.github/workflows/checkout_code.yml
+      
+    install:
+      needs: checkout
+      uses: ./.github/workflows/setup_node.yml
+
+    install_package:
+      needs: [checkout, install]
+      uses: ./.github/workflows/install_packages.yml
+      
+    run_testcase:
+      needs: [checkout, install, install_package]
+      uses: ./.github/workflows/run_test.yml

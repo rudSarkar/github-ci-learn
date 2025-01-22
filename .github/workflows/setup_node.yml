@@ -1,4 +1,4 @@
-name: Setup Node.js
+name: Installing Node.js
 
 on:
   workflow_call:
